@@ -107,7 +107,7 @@ $cards = [
         <article class="card">
             <section class="card__hero">
                 <header class="card__hero-header">
-                    <span>$<?php echo $card["salary"]; ?>/hr</span>
+                    <span>$<?php echo $card['salary']; ?>/hr</span>
                     <div class="card__icon">
                         <svg height="20" width="20" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
                             fill="none" xmlns="http://www.w3.org/2000/svg">
