@@ -4,7 +4,11 @@ $color = "pink";
 $lang = "fr";
 $title = "Mon super site internet, c'est le plus beau de l'univers";
 
-$style = "style1";
+if (isset($_GET["style"])) {
+    $style = $_GET["style"];
+} else {
+    $style = "style1";
+}
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $lang; ?>">
@@ -20,9 +24,15 @@ $style = "style1";
 
     <header>
         <nav>
-            <?php for ($i = 0; $i < count($liens); $i++) : ?>
-            <a href=" #"><?php echo $liens[$i]; ?></a>
-            <?php endfor; ?>
+            <div>
+                <?php for ($i = 0; $i < count($liens); $i++) : ?>
+                <a href=" #"><?php echo $liens[$i]; ?></a>
+                <?php endfor; ?>
+            </div>
+            <div>
+                <a href="http://127.0.0.1:8000/css_external.php?style=style1">Style 1</a>
+                <a href="http://127.0.0.1:8000/css_external.php?style=style2">Style 2</a>
+            </div>
         </nav>
     </header>
 </body>
