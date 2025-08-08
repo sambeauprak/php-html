@@ -53,6 +53,7 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
     </form>
 <?php elseif ($_SESSION["nbEssais"] >= 3): ?>
     <h2>Vous avez échoué, bande de nazes !</h2>
+    <a href="reset.php">Je ne suis pas un naze, sale plouc</a>
 <?php else: ?>
     <h2>Connecté</h2>
     <a href="profil.php">Profil</a>
